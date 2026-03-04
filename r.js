@@ -87,3 +87,20 @@ const header = document.querySelector(".header");
 window.addEventListener("scroll", () => {
   header.classList.toggle("scrolled", window.scrollY > 40);
 });
+// =======================================
+// 5. Mobile Menu Toggle
+// =======================================
+
+const menuToggle = document.querySelector(".menu-toggle");
+const navMenu = document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("open");
+});
+
+// Close menu when clicking a link (mobile)
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("open");
+  });
+});
