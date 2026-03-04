@@ -283,20 +283,41 @@ body {
 /* ============================= */
 
 @media (max-width: 768px) {
+
   .nav {
-    flex-direction: column;
-    gap: 15px;
+    position: relative;
+  }
+
+  .menu-toggle {
+    display: flex;
   }
 
   .nav-links {
-    justify-content: center;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #0f172a;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 220px;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.05);
+
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: 0.25s ease;
   }
 
-  .hero h2 {
-    font-size: 28px;
+  .nav-links a {
+    width: 100%;
+    padding: 8px 0;
   }
 
-  .section {
-    padding: 90px 0;
+  .nav-links.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
   }
 }
