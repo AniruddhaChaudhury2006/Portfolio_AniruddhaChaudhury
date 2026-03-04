@@ -1,36 +1,34 @@
 /* ============================= */
-/* CYBERPUNK THEME */
+/* GLOBAL RESET */
 /* ============================= */
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Orbitron', 'Inter', sans-serif;
+}
+
+html {
   scroll-behavior: smooth;
 }
 
 body {
-  background: #05010a;
-  color: #e0e0ff;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+    "Inter", system-ui, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
   line-height: 1.7;
   overflow-x: hidden;
 }
 
 /* ============================= */
-/* NEON BACKGROUND GRID */
+/* LAYOUT */
 /* ============================= */
 
-body::before {
-  content: "";
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background:
-    linear-gradient(rgba(255,0,255,0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,255,255,0.05) 1px, transparent 1px);
-  background-size: 40px 40px;
-  z-index: -1;
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
 }
 
 /* ============================= */
@@ -41,18 +39,11 @@ body::before {
   position: fixed;
   width: 100%;
   top: 0;
-  background: rgba(5, 1, 10, 0.85);
-  backdrop-filter: blur(10px);
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   padding: 18px 0;
   z-index: 1000;
-  border-bottom: 1px solid #ff00ff40;
-}
-
-.logo {
-  font-size: 22px;
-  font-weight: 700;
-  color: #00ffff;
-  text-shadow: 0 0 10px #00ffff;
 }
 
 .nav {
@@ -61,23 +52,48 @@ body::before {
   align-items: center;
 }
 
+.logo {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+}
+
+/* Navigation */
+
 .nav-links {
   display: flex;
   align-items: center;
+  gap: 24px;
   flex-wrap: wrap;
 }
 
 .nav-links a {
-  margin-left: 18px;
   text-decoration: none;
-  color: #ccc;
-  transition: 0.3s;
+  font-size: 14px;
+  color: #94a3b8;
+  font-weight: 500;
+  transition: 0.25s ease;
 }
 
-.nav a:hover,
-.nav a.active {
-  color: #ff00ff;
-  text-shadow: 0 0 8px #ff00ff;
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+.nav-links a.active {
+  color: #ffffff;
+  position: relative;
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #3b82f6;
+  border-radius: 4px;
 }
 
 /* ============================= */
@@ -85,65 +101,63 @@ body::before {
 /* ============================= */
 
 .hero {
-  padding: 220px 0 140px;
+  padding: 200px 0 140px;
   text-align: center;
 }
 
 .profile-pic {
-  width: 200px;
-  height: 200px;
+  width: 170px;
+  height: 170px;
   border-radius: 50%;
-  border: 3px solid #00ffff;
-  box-shadow: 0 0 30px #00ffff;
+  object-fit: cover;
   margin-bottom: 30px;
-  transition: 0.4s;
+  border: 3px solid #1e293b;
+  transition: 0.3s ease;
 }
 
 .profile-pic:hover {
-  box-shadow: 0 0 60px #ff00ff;
   transform: scale(1.05);
 }
 
 .tagline {
-  color: #ff00ff;
-  letter-spacing: 2px;
+  color: #3b82f6;
+  font-size: 14px;
+  font-weight: 600;
   margin-bottom: 15px;
-  text-shadow: 0 0 10px #ff00ff;
+  letter-spacing: 1px;
 }
 
 .hero h2 {
-  font-size: 48px;
-  font-weight: 800;
+  font-size: 42px;
+  font-weight: 700;
   margin-bottom: 20px;
-  color: #00ffff;
-  text-shadow: 0 0 15px #00ffff;
+  color: #ffffff;
 }
 
 .hero-desc {
-  max-width: 650px;
-  margin: auto;
-  margin-bottom: 40px;
-  color: #b3b3ff;
+  max-width: 600px;
+  margin: 0 auto 40px;
+  color: #94a3b8;
 }
 
 /* ============================= */
-/* NEON BUTTON */
+/* BUTTON */
 /* ============================= */
 
 .btn {
-  padding: 14px 34px;
-  border: 2px solid #ff00ff;
-  color: #ff00ff;
+  display: inline-block;
+  padding: 12px 28px;
+  background: #3b82f6;
+  color: white;
   text-decoration: none;
   border-radius: 8px;
   font-weight: 600;
-  transition: 0.3s;
+  transition: 0.25s ease;
 }
 
 .btn:hover {
-  background: #ff00ff;
-  color: #05010a;
-  box-shadow: 0 0 20px #ff00ff;
+  background: #2563eb;
+  transform: translateY(-2px);
 }
 
 /* ============================= */
@@ -156,44 +170,48 @@ body::before {
 
 .section-title {
   text-align: center;
-  font-size: 34px;
+  font-size: 28px;
+  font-weight: 600;
   margin-bottom: 60px;
-  color: #00ffff;
-  text-shadow: 0 0 12px #00ffff;
+  color: #ffffff;
 }
 
 /* ============================= */
-/* PROJECT GRID */
+/* GRID */
 /* ============================= */
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 35px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
 }
 
+/* ============================= */
+/* CARD */
+/* ============================= */
+
 .project-card {
-  padding: 35px;
-  background: rgba(20, 0, 40, 0.6);
-  border: 1px solid #00ffff40;
-  border-radius: 16px;
-  transition: 0.4s;
-  backdrop-filter: blur(6px);
+  background: #1e293b;
+  padding: 28px;
+  border-radius: 14px;
+  transition: 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.04);
 }
 
 .project-card:hover {
-  transform: translateY(-10px);
-  border-color: #ff00ff;
-  box-shadow: 0 0 25px #ff00ff80;
+  transform: translateY(-6px);
+  border-color: rgba(59, 130, 246, 0.5);
 }
 
 .project-card h3 {
-  margin-bottom: 15px;
-  color: #ff00ff;
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #ffffff;
 }
 
 .project-card p {
-  color: #b3b3ff;
+  font-size: 14px;
+  color: #94a3b8;
 }
 
 /* ============================= */
@@ -202,16 +220,18 @@ body::before {
 
 #contact p {
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  color: #94a3b8;
 }
 
 #contact a {
-  color: #00ffff;
+  color: #3b82f6;
   text-decoration: none;
+  font-weight: 500;
 }
 
 #contact a:hover {
-  text-shadow: 0 0 10px #00ffff;
+  text-decoration: underline;
 }
 
 /* ============================= */
@@ -220,9 +240,9 @@ body::before {
 
 .footer {
   text-align: center;
-  padding: 40px 0;
-  border-top: 1px solid #ff00ff40;
-  color: #777;
+  padding: 50px 0;
+  color: #64748b;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 /* ============================= */
@@ -232,7 +252,7 @@ body::before {
 .section,
 .project-card {
   opacity: 0;
-  transform: translateY(50px);
+  transform: translateY(40px);
   transition: 0.7s ease;
 }
 
@@ -246,15 +266,20 @@ body::before {
 /* ============================= */
 
 @media (max-width: 768px) {
-  .hero h2 {
-    font-size: 32px;
-  }
-
   .nav {
     flex-direction: column;
+    gap: 15px;
   }
 
-  .nav a {
-    margin: 8px 0;
+  .nav-links {
+    justify-content: center;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .section {
+    padding: 90px 0;
   }
 }
