@@ -61,12 +61,17 @@ body::before {
   align-items: center;
 }
 
-.nav a {
-  margin-left: 20px;
+.nav-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  margin-left: 18px;
   text-decoration: none;
   color: #ccc;
   transition: 0.3s;
-  position: relative;
 }
 
 .nav a:hover,
