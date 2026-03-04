@@ -293,31 +293,23 @@ body {
   }
 
   .nav-links {
-    position: absolute;
-    top: 70px;
-    right: 0;
-    background: #0f172a;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 220px;
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid rgba(255,255,255,0.05);
+  position: absolute;
+  top: 70px;
+  right: 0;
+  background: #0f172a;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 240px;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.05);
 
-    opacity: 0;
-    transform: translateY(-10px);
-    pointer-events: none;
-    transition: 0.25s ease;
-  }
+  max-height: 75vh;          /* allow enough height */
+  overflow-y: auto;          /* enable scroll */
+  -webkit-overflow-scrolling: touch;
 
-  .nav-links a {
-    width: 100%;
-    padding: 8px 0;
-  }
-
-  .nav-links.open {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
-  }
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: 0.25s ease;
 }
