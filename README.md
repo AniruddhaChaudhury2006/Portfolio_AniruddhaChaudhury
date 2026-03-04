@@ -27,16 +27,12 @@ This is my fully responsive, interactive personal portfolio built using pure HTM
 
 🎯 Why My Portfolio Stands Out
 
-✔ Modern Dark-Themed UI
-✔ Glassmorphism Project Cards
-✔ Smooth Scroll Navigation
-✔ Scroll-Reveal Animations (IntersectionObserver API)
-✔ Active Section Highlighting
-✔ Sticky Header with Dynamic Shadow
-✔ Interactive Click Effects
-✔ Fully Responsive Design
-
-No frameworks. No templates. Built from scratch.
+✔ Neon cyan & magenta glow
+✔ Grid hacker background
+✔ Futuristic typography
+✔ Glowing profile image
+✔ Neon hover animations
+✔ Cyber AI lab aesthetic
 
 🛠 Tech Stack
 
