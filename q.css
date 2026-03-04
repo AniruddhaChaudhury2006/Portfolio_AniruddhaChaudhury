@@ -68,15 +68,14 @@ body {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 24px;
-  flex-wrap: wrap;
+  gap: 32px;   /* clean spacing between menu items */
 }
-
 .nav-links a {
   text-decoration: none;
   font-size: 14px;
   color: #94a3b8;
   font-weight: 500;
+  letter-spacing: 0.3px;
   transition: 0.25s ease;
 }
 
