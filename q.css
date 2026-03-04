@@ -49,7 +49,21 @@ body {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(14px);
 }
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 
+.menu-toggle span {
+  width: 24px;
+  height: 2px;
+  background: #ffffff;
+  transition: 0.3s ease;
+}
 .nav {
   display: flex;
   justify-content: space-between;
