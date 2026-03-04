@@ -313,3 +313,6 @@ body {
   pointer-events: none;
   transition: 0.25s ease;
 }
+  .nav-links.open {
+  opacity: 1;
+}
